@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { ScrollView } from 'react-native';
+import firebase from 'firebase';
 import axios from 'axios';
 import AlbumDetail from './AlbumDetail';
+import { CardSection, Button } from './common';
 
 class AlbumList extends Component {
     
@@ -24,11 +26,22 @@ class AlbumList extends Component {
             <AlbumDetail key={album.title} album={album} />
         );
     }
+
+    renderLogOutButton() {
+        return (
+            <CardSection>
+                <Button onPress={() => firebase.auth().signOut()}>
+                    Log Out
+                </Button>
+            </CardSection>      
+        );
+    }
     
     render() {
         return (
             <ScrollView>
-                { this.renderAlbums() }
+                {this.renderAlbums()}
+                {this.renderLogOutButton()}
             </ScrollView>
         );
     }
