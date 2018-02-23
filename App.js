@@ -1,20 +1,18 @@
 import React, { Component } from 'react';
 import {
-  Platform,
   StyleSheet,
   View
 } from 'react-native';
 import firebase from 'firebase';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 import { Header, Spinner } from './src/components/common';
 import AlbumList from './src/components/AlbumList';
+//import LibraryList from './src/components/LibraryList';
 import LoginForm from './src/components/LoginForm';
+import reducers from './src/reducers';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+const store = createStore(reducers);
 
 export default class App extends Component<{}> {
   
@@ -43,6 +41,7 @@ export default class App extends Component<{}> {
     switch (this.state.loggedIn) {
       case true:
         return <AlbumList />;
+        //return <LibraryList />;
       case false:
         return <LoginForm />;
       default: 
@@ -52,10 +51,12 @@ export default class App extends Component<{}> {
 
   render() {
     return (
-      <View style={styles.albumsContainer}>
-        <Header headerText={this.state.headerText} />
-        {this.renderContent()}
-      </View>
+      <Provider store={store}>
+        <View style={styles.albumsContainer}>
+          <Header headerText={this.state.headerText} />
+          {this.renderContent()}
+        </View>
+      </Provider>
     );
   }
 }
