@@ -45,22 +45,20 @@ Install and configure React Native. See the Docs (https://facebook.github.io/rea
  
  ### Todos
  ***
-  - Write Tests
-  - Rethink Github Save
-  - Add Code Comments
-  - Add Night Mode
+  - Write tests
+  - Add code comments
  
  ### License
  ***
- albums is (c) 2018 Reysmer Valle ([@ValleReysmer]) and may be freely distributed under the [MIT license](http://opensource.org/licenses/MIT). See the `MIT-LICENSE` file.
+ albums is (c) 2018 Reysmer Valle ([@ValleReysmer]) and may be freely distributed under the [MIT license](https://github.com/reysmerwvr/albums/blob/master/LICENSE.md). See the `MIT-LICENSE` file.
  
  [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
  
-    [albums]: <https://github.com/reysmerwvr/albums>
-    [git-repo-url]: <https://github.com/reysmerwvr/albums.git>
-    [Redux]: <https://redux.js.org/>
-    [React Native]: <https://facebook.github.io/react-native/>
-    [React.js]: <https://reactjs.org/>
-    [@ValleReysmer]: <http://twitter.com/ValleReysmer>
-    [Firebase]: <https://firebase.google.com/products/>
+ [albums]:https://github.com/reysmerwvr/albums
+ [git-repo-url]:https://github.com/reysmerwvr/albums.git
+ [Redux]:https://redux.js.org/
+ [React Native]:https://facebook.github.io/react-native/
+ [React.js]:https://reactjs.org/
+ [@ValleReysmer]:http://twitter.com/ValleReysmer
+ [Firebase]:https://firebase.google.com/products/
     
